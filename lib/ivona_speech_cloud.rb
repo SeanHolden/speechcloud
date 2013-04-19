@@ -1,7 +1,9 @@
 BASE_URL = 'https://secure.ivona.com/api/saas/rest'
 
 module IvonaSpeechCloud
-  def self.testing
+  self.init
+
+  def self.init
     unless load_parameters
       puts 'Please set your API key and Email from your Ivona account:'
       puts 'IvonaSpeechCloud::Config.api_key = <your_api_key>'
@@ -24,9 +26,9 @@ module IvonaSpeechCloud
   end
 end
 
-require 'ivona_speech_cloud/authorization_methods'
-require 'ivona_speech_cloud/speech_generation_methods'
-require 'ivona_speech_cloud/pronunciation_rules_methods'
-require 'ivona_speech_cloud/additional_information_methods'
+require 'ivona_speech_cloud/authorization'
+require 'ivona_speech_cloud/speech_generation'
+require 'ivona_speech_cloud/pronunciation_rules'
+require 'ivona_speech_cloud/additional_information'
 require 'ivona_speech_cloud/get_md5'
 require 'ivona_speech_cloud/configuration'
