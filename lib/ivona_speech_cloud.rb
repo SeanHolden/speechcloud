@@ -1,28 +1,12 @@
 BASE_URL = 'https://secure.ivona.com/api/saas/rest'
+require 'digest/md5'
 
 module IvonaSpeechCloud
-  self.init
-
-  def self.init
-    unless load_parameters
-      puts 'Please set your API key and Email from your Ivona account:'
-      puts 'IvonaSpeechCloud::Config.api_key = <your_api_key>'
-      puts 'IvonaSpeechCloud::Config.email   = <your_email_address>'
-    end
-  end
-  
-  protected
-
-  def self.load_parameters
-    conf = IvonaSpeechCloud::Config
-    conf.codec_id = conf.codec_id || 'mp3/22050'
-    conf.voice_id = conf.voice_id || 'en_gb_emma'
-
-    if conf.api_key && conf.email
-      return true
-    else
-      return false
-    end
+  class << self
+    # TODO: Write a before method, to ensure config is set up.
+    # 'Please set your API key and Email from your Ivona account:'
+    # 'IvonaSpeechCloud::Config.api_key = <your_api_key>'
+    # 'IvonaSpeechCloud::Config.email   = <your_email_address>'
   end
 end
 
