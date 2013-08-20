@@ -2,8 +2,8 @@ module IvonaSpeechCloud::AdditionalInfo
   class << self
     # Check the characters price for a specified speech parameters (text and voice pair)
     def check_text_price(voice_id, text)
-      token  = Auth.get_token
-      md5    = GetMd5.formula(token)
+      token  = IvonaSpeechCloud::Auth.get_token
+      md5    = IvonaSpeechCloud::GetMd5.formula(token)
       params = [  "token=#{token}",
                   "md5=#{md5}",
                   "text=#{text}", 
@@ -14,8 +14,8 @@ module IvonaSpeechCloud::AdditionalInfo
     
     # Show user TTS SaaS agreement data (this method will result in an error if there isn’t a SaaS agreement currently active for user)
     def get_user_agreement_data
-      token  = Auth.get_token
-      md5    = GetMd5.formula(token)
+      token  = IvonaSpeechCloud::Auth.get_token
+      md5    = IvonaSpeechCloud::GetMd5.formula(token)
       params = [  "token=#{token}",
                   "md5=#{md5}"  ]
       params = params.join('&')
@@ -24,8 +24,8 @@ module IvonaSpeechCloud::AdditionalInfo
 
     # Get all available voices list
     def list_voices
-      token  = Auth.get_token
-      md5    = GetMd5.formula(token)
+      token  = IvonaSpeechCloud::Auth.get_token
+      md5    = IvonaSpeechCloud::GetMd5.formula(token)
       params = [  "token=#{token}",
                   "md5=#{md5}"  ]
       params = params.join('&')
@@ -34,8 +34,8 @@ module IvonaSpeechCloud::AdditionalInfo
 
     # Get single voice data
     def get_voice_data( voice_id )
-      token  = Auth.get_token
-      md5    = GetMd5.formula(token)
+      token  = IvonaSpeechCloud::Auth.get_token
+      md5    = IvonaSpeechCloud::GetMd5.formula(token)
       params = [  "token=#{token}",
                   "md5=#{md5}"  ]
       params = params.join('&')
@@ -44,9 +44,9 @@ module IvonaSpeechCloud::AdditionalInfo
 
     # Get all available codecs list
     def list_codecs
-      token  = Auth.get_token
+      token  = IvonaSpeechCloud::Auth.get_token
       params = [  "token=#{token}",
-                  "md5=#{GetMd5.formula(token)}"  ]
+                  "md5=#{IvonaSpeechCloud::GetMd5.formula(token)}"  ]
       params = params.join('&')
       HTTParty.get("#{BASE_URL}/codecs?#{params}")
     end
