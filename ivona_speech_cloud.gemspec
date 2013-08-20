@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.email         = 'seanholden1@gmail.com'
   s.files         = ["lib/ivona_speech_cloud.rb"]
   s.homepage      = ''
-    'http://rubygems.org/gems/ivona_speech_cloud'
+    #'http://rubygems.org/gems/ivona_speech_cloud'
   s.add_dependency "httparty"
-  s.add_dependency "digest/md5"
 end
