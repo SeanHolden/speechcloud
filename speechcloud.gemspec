@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description   = "A gem for using the Ivona Text-to-Speech Speech Cloud API."
   s.authors       = ["Sean Holden"]
   s.email         = 'seanholden1@gmail.com'
-  s.files         = ["lib/ivona_speech_cloud.rb"]
+  s.files         = ["lib/speechcloud.rb"]
   s.homepage      = ''
     #'http://rubygems.org/gems/ivona_speech_cloud'
   s.add_dependency "httparty"
