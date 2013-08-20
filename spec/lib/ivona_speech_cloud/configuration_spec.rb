@@ -27,4 +27,13 @@ describe IvonaSpeechCloud::Config do
       this.codec_id.should == 'mp3/22050'
     end
   end
+
+  # Setting config back to working creds
+  after(:all) do
+    conf = IvonaSpeechCloud::Config
+    conf.api_key  = ENV['IVONA_API_KEY']
+    conf.email    = ENV['IVONA_EMAIL']
+    conf.codec_id = 'mp3/22050'
+    conf.voice_id = 'en_gb_emma'
+  end
 end
