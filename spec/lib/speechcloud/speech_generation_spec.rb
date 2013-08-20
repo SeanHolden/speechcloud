@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::Speech do
-  let(:api_key) { IvonaSpeechCloud::Config.api_key }
-  let(:email)   { IvonaSpeechCloud::Config.email }
-  let(:this)    { IvonaSpeechCloud::Speech }
+describe SpeechCloud::Speech do
+  let(:api_key) { SpeechCloud::Config.api_key }
+  let(:email)   { SpeechCloud::Config.email }
+  let(:this)    { SpeechCloud::Speech }
 
   context "get_speech_file_params method" do
     it "returns a hash of params" do

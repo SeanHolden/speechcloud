@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::Auth do
-  let(:api_key) { IvonaSpeechCloud::Config.api_key }
-  let(:email)   { IvonaSpeechCloud::Config.email }
-  let(:this)    { IvonaSpeechCloud::Auth }
+describe SpeechCloud::Auth do
+  let(:api_key) { SpeechCloud::Config.api_key }
+  let(:email)   { SpeechCloud::Config.email }
+  let(:this)    { SpeechCloud::Auth }
   let(:token)   { this.get_token }
   
   context "get_token method" do

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::Pronunciation do
-  let(:api_key) { IvonaSpeechCloud::Config.api_key }
-  let(:email)   { IvonaSpeechCloud::Config.email }
-  let(:this)    { IvonaSpeechCloud::Pronunciation }
+describe SpeechCloud::Pronunciation do
+  let(:api_key) { SpeechCloud::Config.api_key }
+  let(:email)   { SpeechCloud::Config.email }
+  let(:this)    { SpeechCloud::Pronunciation }
 
   context "create new pronunciation rule, modify it and delete it" do
     it "should work as expected" do

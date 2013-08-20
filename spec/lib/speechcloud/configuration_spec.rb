@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::Config do
-  let(:this) { IvonaSpeechCloud::Config }
+describe SpeechCloud::Config do
+  let(:this) { SpeechCloud::Config }
   
   context "Assigning config variables" do
     before(:all) do
@@ -30,7 +30,7 @@ describe IvonaSpeechCloud::Config do
 
   # Setting config back to working creds
   after(:all) do
-    conf = IvonaSpeechCloud::Config
+    conf = SpeechCloud::Config
     conf.api_key  = ENV['IVONA_API_KEY']
     conf.email    = ENV['IVONA_EMAIL']
     conf.codec_id = 'mp3/22050'

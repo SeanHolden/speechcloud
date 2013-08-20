@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::GetMd5 do
-  let(:this)    { IvonaSpeechCloud::GetMd5 }
-  let(:api_key) { IvonaSpeechCloud::Config.api_key }
+describe SpeechCloud::GetMd5 do
+  let(:this)    { SpeechCloud::GetMd5 }
+  let(:api_key) { SpeechCloud::Config.api_key }
   
   context "to_md5 method" do
     it "can return an md5 hash of any string" do

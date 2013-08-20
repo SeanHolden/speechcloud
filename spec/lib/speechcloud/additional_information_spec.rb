@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe IvonaSpeechCloud::AdditionalInfo do
-  let(:api_key) { IvonaSpeechCloud::Config.api_key }
-  let(:email)   { IvonaSpeechCloud::Config.email }
-  let(:this)    { IvonaSpeechCloud::AdditionalInfo  }
+describe SpeechCloud::AdditionalInfo do
+  let(:api_key) { SpeechCloud::Config.api_key }
+  let(:email)   { SpeechCloud::Config.email }
+  let(:this)    { SpeechCloud::AdditionalInfo  }
   
   context "check_text_price method" do
     it "should return the characters price for a specified speech parameters" do
